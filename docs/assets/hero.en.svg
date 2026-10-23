@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="840" viewBox="0 0 1600 840" role="img" aria-labelledby="title desc" xml:lang="en">
+<title id="title">Your next message. Just press Tab.</title><desc id="desc">An illustrated next-message prediction for DeepSeek Harness. Tab accepts an editable draft. Esc dismisses. You choose when to send.</desc>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111713"/><stop offset="1" stop-color="#19221D"/></linearGradient>
+<radialGradient id="glow"><stop stop-color="#D6FA79" stop-opacity=".10"/><stop offset="1" stop-color="#D6FA79" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1600" height="840" rx="28" fill="url(#bg)"/>
+<ellipse cx="1170" cy="340" rx="520" ry="385" fill="url(#glow)"/>
+<path d="M64 112H1536M64 608H1536" stroke="#354238"/>
+<g font-family="Inter, 'Noto Sans CJK SC', 'Microsoft YaHei', 'PingFang SC', 'Segoe UI', Arial, sans-serif">
+<rect x="64" y="48" width="38" height="38" rx="11" fill="#D6FA79"/>
+<path d="m76 59 9 8-9 8m12 0h5" fill="none" stroke="#142018" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+
+<text x="116" y="75" font-size="23" fill="#F2F4EE" font-weight="700" >DSH NEXT MESSAGE</text>
+<text x="1536" y="73" font-size="14" fill="#AAB8A9" font-weight="500" text-anchor="end">COMMUNITY PLUGIN</text>
+<text x="64" y="168" font-size="18" fill="#C5D2C0" font-weight="500" >DeepSeek Harness · Next-message prediction</text>
+<text x="60" y="270" font-size="65" fill="#F2F4EE" font-weight="700" letter-spacing="-2">Your next message.</text>
+<text x="60" y="375" font-size="87" fill="#D6FA79" font-weight="700" letter-spacing="-2">Just press Tab.</text>
+<text x="66" y="435" font-size="25" fill="#E0E8DC" font-weight="500" >Keep the conversation moving.</text>
+<text x="66" y="474" font-size="21" fill="#AAB8A9" font-weight="400" >A suggestion first. Your decision, always.</text>
+<rect x="64" y="518" width="318" height="43" rx="21.5" fill="#D6FA79"/>
+<text x="223" y="546" font-size="17" fill="#172117" font-weight="650" text-anchor="middle">Less typing. More conversation.</text>
+<rect x="794" y="164" width="742" height="405" rx="20" fill="#101611" stroke="#4C5F49"/>
+<path d="M794 218H1536" stroke="#31412F"/>
+<circle cx="821" cy="191" r="4" fill="#91AC82"/><circle cx="838" cy="191" r="4" fill="#5B7150"/><circle cx="855" cy="191" r="4" fill="#3C5033"/>
+
+<text x="882" y="197" font-size="15" fill="#B6C4AD" font-weight="400" >A conversation in progress</text>
+<circle cx="834" cy="264" r="13" fill="#D6FA79"/>
+<path d="m828 264 4 4 8-9" fill="none" stroke="#172117" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="858" y="270" font-size="15" fill="#AEC49F" font-weight="500" >Assistant finished replying</text>
+<text x="820" y="312" font-size="24" fill="#E4EBDF" font-weight="500" >Both approaches have their trade-offs.</text>
+<rect x="820" y="332" width="500" height="5" rx="2.5" fill="#2A3729"/><rect x="820" y="346" width="403" height="5" rx="2.5" fill="#2A3729"/>
+<rect x="816" y="378" width="698" height="117" rx="14" fill="#1B281B" stroke="#B4D978" stroke-width="1.5"/>
+<path d="M839 400V429" stroke="#D6FA79" stroke-width="2"/>
+<text x="852" y="422" font-size="26" fill="#91A485" font-weight="400" >Show me a practical example.</text>
+<text x="839" y="468" font-size="14" fill="#95AB85" font-weight="400" >Predicted next message · not a draft yet</text>
+<rect x="1436" y="445" width="55" height="31" rx="7" fill="#D6FA79"/>
+<text x="1463.5" y="466" font-size="17" fill="#1A2617" font-weight="650" text-anchor="middle">Tab</text>
+<rect x="820" y="515" width="44" height="29" rx="6" fill="#2C3D28" stroke="#566D49"/>
+<text x="842" y="535" font-size="15" fill="#D4E2C8" font-weight="600" text-anchor="middle">Esc</text>
+<text x="876" y="536" font-size="16" fill="#ADBEA1" font-weight="400" >Dismiss</text>
+<rect x="1060" y="515" width="44" height="29" rx="6" fill="#2C3D28" stroke="#566D49"/>
+<text x="1082" y="535" font-size="15" fill="#D4E2C8" font-weight="600" text-anchor="middle">Tab</text>
+<text x="1116" y="536" font-size="16" fill="#ADBEA1" font-weight="400" >Accept as draft</text>
+<text x="1490" y="536" font-size="16" fill="#D6FA79" font-weight="500" text-anchor="end">You send</text>
+<rect x="64" y="639" width="476" height="126" rx="15" fill="#1B251D" stroke="#354238"/>
+<text x="86" y="669" font-size="12" fill="#8EA481" font-weight="600" >01</text>
+<text x="86" y="706" font-size="21" fill="#E7EEE1" font-weight="600" >Aware of the conversation</text>
+<text x="86" y="738" font-size="16" fill="#A7B69E" font-weight="400" >Predicts from your recent context</text>
+<rect x="562" y="639" width="476" height="126" rx="15" fill="#1B251D" stroke="#354238"/>
+<text x="584" y="669" font-size="12" fill="#8EA481" font-weight="600" >02</text>
+<text x="584" y="706" font-size="21" fill="#E7EEE1" font-weight="600" >One Tab to make it yours</text>
+<text x="584" y="738" font-size="16" fill="#A7B69E" font-weight="400" >Accept, edit, or undo the whole sentence</text>
+<rect x="1060" y="639" width="476" height="126" rx="15" fill="#1B251D" stroke="#354238"/>
+<text x="1082" y="669" font-size="12" fill="#8EA481" font-weight="600" >03</text>
+<text x="1082" y="706" font-size="21" fill="#E7EEE1" font-weight="600" >You choose when to send</text>
+<text x="1082" y="738" font-size="16" fill="#A7B69E" font-weight="400" >Suggestions never send themselves</text>
+<text x="64" y="806" font-size="12" fill="#91A086" font-weight="500" >MIT / OPEN SOURCE · BUILT FOR DSH</text>
+<text x="1536" y="806" font-size="12" fill="#91A086" font-weight="400" text-anchor="end">UI illustration · not a screenshot</text>
+</g></svg>
