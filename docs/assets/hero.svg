@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="560" viewBox="0 0 1280 560" role="img" aria-labelledby="title desc">
+  <title id="title">DSH Next Message — Your next message, one Tab away.</title>
+  <desc id="desc">Illustrated conversation composer with a next-message suggestion and a Tab key. You choose when to send.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#10191f"/><stop offset="1" stop-color="#111528"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#66e5c0" stop-opacity=".13"/><stop offset="1" stop-color="#66e5c0" stop-opacity="0"/></radialGradient>
+    <linearGradient id="accent"><stop stop-color="#9ef5d4"/><stop offset="1" stop-color="#8eb9ff"/></linearGradient>
+  </defs>
+  <rect width="1280" height="560" rx="26" fill="url(#bg)"/>
+  <ellipse cx="950" cy="250" rx="410" ry="340" fill="url(#glow)"/>
+  <g fill="none" stroke="#d3eee6" stroke-opacity=".05"><path d="M0 112H1280M0 224H1280M0 336H1280M0 448H1280"/><path d="M128 0V560M256 0V560M384 0V560M512 0V560M640 0V560M768 0V560M896 0V560M1024 0V560M1152 0V560"/></g>
+  <g font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif">
+    <rect x="58" y="51" width="37" height="37" rx="10" fill="#9ef5d4"/>
+    <path d="m70 62 9 8-9 8m12 0h5" fill="none" stroke="#10271f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="108" y="77" fill="#edf8f4" font-size="20" font-weight="650">DSH NEXT MESSAGE</text>
+    <text x="59" y="156" fill="#9ef5d4" font-size="12" font-weight="600" letter-spacing="2.3">A QUIET NUDGE. YOUR NEXT MOVE.</text>
+    <text x="56" y="225" fill="#f1f8f5" font-size="53" font-weight="700" letter-spacing="-2">Your next message,</text>
+    <text x="56" y="293" fill="url(#accent)" font-size="62" font-weight="700" letter-spacing="-2">one Tab away.</text>
+    <text x="60" y="343" fill="#a5b7ba" font-size="19">Context-aware suggestions for DeepSeek Harness.</text>
+    <rect x="59" y="391" width="168" height="40" rx="20" fill="#9ef5d4" fill-opacity=".09" stroke="#9ef5d4" stroke-opacity=".25"/>
+    <circle cx="78" cy="411" r="4" fill="#9ef5d4"/>
+    <text x="92" y="417" fill="#bfe4d6" font-size="14">You choose to send.</text>
+    <text x="59" y="506" fill="#73888e" font-size="12" letter-spacing="1.5">OPEN SOURCE / MIT / BUILT FOR DSH</text>
+    <rect x="680" y="122" width="542" height="324" rx="18" fill="#090e15" stroke="#314049"/>
+    <path d="M681 167H1221" stroke="#243039"/>
+    <circle cx="703" cy="145" r="4" fill="#53666f"/><circle cx="719" cy="145" r="4" fill="#53666f"/><circle cx="735" cy="145" r="4" fill="#53666f"/>
+    <text x="755" y="150" fill="#96a9ae" font-size="12">A conversation in progress</text>
+    <rect x="706" y="195" width="26" height="26" rx="8" fill="#203831"/>
+    <path d="m713 208 5 5 8-10" fill="none" stroke="#9ef5d4" stroke-width="2" stroke-linecap="round"/>
+    <text x="744" y="213" fill="#dce8e5" font-size="15">Here is how the two approaches compare.</text>
+    <rect x="744" y="235" width="394" height="5" rx="2.5" fill="#25313a"/>
+    <rect x="744" y="248" width="327" height="5" rx="2.5" fill="#25313a"/>
+    <rect x="744" y="261" width="359" height="5" rx="2.5" fill="#25313a"/>
+    <rect x="705" y="299" width="492" height="90" rx="12" fill="#111d24" stroke="#629888"/>
+    <path d="M724 320V342" stroke="#9ef5d4" stroke-width="2"/>
+    <text x="733" y="336" fill="#849b9f" font-size="16">Show me a practical example.</text>
+    <text x="724" y="370" fill="#70888e" font-size="11">Suggested next message</text>
+    <rect x="1127" y="350" width="49" height="24" rx="6" fill="#24352f" stroke="#4d6d60"/>
+    <text x="1141" y="366" fill="#c6ebdc" font-size="12">Tab</text>
+    <text x="706" y="421" fill="#71878e" font-size="11">TAB Accept as draft</text>
+    <text x="868" y="421" fill="#71878e" font-size="11">ESC Dismiss</text>
+    <text x="1063" y="421" fill="#9bb7af" font-size="11">Always your call.</text>
+    <text x="1220" y="506" text-anchor="end" fill="#61767c" font-size="11">UI ILLUSTRATION</text>
+  </g>
+</svg>
