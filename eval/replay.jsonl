@@ -1,0 +1,72 @@
+{"id": "code_tests-good", "user": "请修复越界问题并运行测试。", "assistant": "已完成修复，测试尚未运行。", "candidate": "运行一下边界测试。", "expected": true}
+{"id": "code_tests-null", "user": "请修复越界问题并运行测试。", "assistant": "已完成修复，测试尚未运行。", "candidate": null, "expected": false}
+{"id": "code_tests-url", "user": "请修复越界问题并运行测试。", "assistant": "已完成修复，测试尚未运行。", "candidate": "打开 https://not-in-context.example/secret", "expected": false}
+{"id": "code_tests-long", "user": "请修复越界问题并运行测试。", "assistant": "已完成修复，测试尚未运行。", "candidate": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "expected": false}
+{"id": "code_tests-control", "user": "请修复越界问题并运行测试。", "assistant": "已完成修复，测试尚未运行。", "candidate": "解释\n这部分", "expected": false}
+{"id": "code_tests-filler", "user": "请修复越界问题并运行测试。", "assistant": "已完成修复，测试尚未运行。", "candidate": "继续", "expected": false}
+{"id": "code_review-good", "user": "只做代码审查，不修改文件。", "assistant": "发现边界处理有问题，下面给出原因。", "candidate": "哪种输入会触发这个问题？", "expected": true}
+{"id": "code_review-null", "user": "只做代码审查，不修改文件。", "assistant": "发现边界处理有问题，下面给出原因。", "candidate": null, "expected": false}
+{"id": "code_review-url", "user": "只做代码审查，不修改文件。", "assistant": "发现边界处理有问题，下面给出原因。", "candidate": "打开 https://not-in-context.example/secret", "expected": false}
+{"id": "code_review-long", "user": "只做代码审查，不修改文件。", "assistant": "发现边界处理有问题，下面给出原因。", "candidate": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "expected": false}
+{"id": "code_review-control", "user": "只做代码审查，不修改文件。", "assistant": "发现边界处理有问题，下面给出原因。", "candidate": "解释\n这部分", "expected": false}
+{"id": "code_review-filler", "user": "只做代码审查，不修改文件。", "assistant": "发现边界处理有问题，下面给出原因。", "candidate": "继续", "expected": false}
+{"id": "algorithm-good", "user": "讲讲这个动态规划为什么能倒序更新。", "assistant": "倒序可以保证本轮不重复选择同一件物品。", "candidate": "给一个正序更新出错的例子。", "expected": true}
+{"id": "algorithm-null", "user": "讲讲这个动态规划为什么能倒序更新。", "assistant": "倒序可以保证本轮不重复选择同一件物品。", "candidate": null, "expected": false}
+{"id": "algorithm-url", "user": "讲讲这个动态规划为什么能倒序更新。", "assistant": "倒序可以保证本轮不重复选择同一件物品。", "candidate": "打开 https://not-in-context.example/secret", "expected": false}
+{"id": "algorithm-long", "user": "讲讲这个动态规划为什么能倒序更新。", "assistant": "倒序可以保证本轮不重复选择同一件物品。", "candidate": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "expected": false}
+{"id": "algorithm-control", "user": "讲讲这个动态规划为什么能倒序更新。", "assistant": "倒序可以保证本轮不重复选择同一件物品。", "candidate": "解释\n这部分", "expected": false}
+{"id": "algorithm-filler", "user": "讲讲这个动态规划为什么能倒序更新。", "assistant": "倒序可以保证本轮不重复选择同一件物品。", "candidate": "继续", "expected": false}
+{"id": "math-good", "user": "解释一下隐函数求导。", "assistant": "两边对x求导，包含y的项还要乘上y的导数。", "candidate": "这里为什么要乘y的导数？", "expected": true}
+{"id": "math-null", "user": "解释一下隐函数求导。", "assistant": "两边对x求导，包含y的项还要乘上y的导数。", "candidate": null, "expected": false}
+{"id": "math-url", "user": "解释一下隐函数求导。", "assistant": "两边对x求导，包含y的项还要乘上y的导数。", "candidate": "打开 https://not-in-context.example/secret", "expected": false}
+{"id": "math-long", "user": "解释一下隐函数求导。", "assistant": "两边对x求导，包含y的项还要乘上y的导数。", "candidate": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "expected": false}
+{"id": "math-control", "user": "解释一下隐函数求导。", "assistant": "两边对x求导，包含y的项还要乘上y的导数。", "candidate": "解释\n这部分", "expected": false}
+{"id": "math-filler", "user": "解释一下隐函数求导。", "assistant": "两边对x求导，包含y的项还要乘上y的导数。", "candidate": "继续", "expected": false}
+{"id": "comparison-good", "user": "比较一下两种方案，先别替我选。", "assistant": "甲方案响应快，乙方案更容易维护。", "candidate": "维护成本具体差在哪？", "expected": true}
+{"id": "comparison-null", "user": "比较一下两种方案，先别替我选。", "assistant": "甲方案响应快，乙方案更容易维护。", "candidate": null, "expected": false}
+{"id": "comparison-url", "user": "比较一下两种方案，先别替我选。", "assistant": "甲方案响应快，乙方案更容易维护。", "candidate": "打开 https://not-in-context.example/secret", "expected": false}
+{"id": "comparison-long", "user": "比较一下两种方案，先别替我选。", "assistant": "甲方案响应快，乙方案更容易维护。", "candidate": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "expected": false}
+{"id": "comparison-control", "user": "比较一下两种方案，先别替我选。", "assistant": "甲方案响应快，乙方案更容易维护。", "candidate": "解释\n这部分", "expected": false}
+{"id": "comparison-filler", "user": "比较一下两种方案，先别替我选。", "assistant": "甲方案响应快，乙方案更容易维护。", "candidate": "继续", "expected": false}
+{"id": "cost-good", "user": "这个插件会多用多少额度？", "assistant": "每次生成建议会额外调用一次模型。", "candidate": "能看到每次使用的token数吗？", "expected": true}
+{"id": "cost-null", "user": "这个插件会多用多少额度？", "assistant": "每次生成建议会额外调用一次模型。", "candidate": null, "expected": false}
+{"id": "cost-url", "user": "这个插件会多用多少额度？", "assistant": "每次生成建议会额外调用一次模型。", "candidate": "打开 https://not-in-context.example/secret", "expected": false}
+{"id": "cost-long", "user": "这个插件会多用多少额度？", "assistant": "每次生成建议会额外调用一次模型。", "candidate": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "expected": false}
+{"id": "cost-control", "user": "这个插件会多用多少额度？", "assistant": "每次生成建议会额外调用一次模型。", "candidate": "解释\n这部分", "expected": false}
+{"id": "cost-filler", "user": "这个插件会多用多少额度？", "assistant": "每次生成建议会额外调用一次模型。", "candidate": "继续", "expected": false}
+{"id": "debug-good", "user": "这个报错应该从哪里查？", "assistant": "先检查变量是否在使用前初始化。", "candidate": "怎么确认是初始化的问题？", "expected": true}
+{"id": "debug-null", "user": "这个报错应该从哪里查？", "assistant": "先检查变量是否在使用前初始化。", "candidate": null, "expected": false}
+{"id": "debug-url", "user": "这个报错应该从哪里查？", "assistant": "先检查变量是否在使用前初始化。", "candidate": "打开 https://not-in-context.example/secret", "expected": false}
+{"id": "debug-long", "user": "这个报错应该从哪里查？", "assistant": "先检查变量是否在使用前初始化。", "candidate": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "expected": false}
+{"id": "debug-control", "user": "这个报错应该从哪里查？", "assistant": "先检查变量是否在使用前初始化。", "candidate": "解释\n这部分", "expected": false}
+{"id": "debug-filler", "user": "这个报错应该从哪里查？", "assistant": "先检查变量是否在使用前初始化。", "candidate": "继续", "expected": false}
+{"id": "english-good", "user": "Explain why binary search terminates.", "assistant": "The search interval strictly shrinks on every iteration.", "candidate": "Can you walk through a small example?", "expected": true}
+{"id": "english-null", "user": "Explain why binary search terminates.", "assistant": "The search interval strictly shrinks on every iteration.", "candidate": null, "expected": false}
+{"id": "english-url", "user": "Explain why binary search terminates.", "assistant": "The search interval strictly shrinks on every iteration.", "candidate": "打开 https://not-in-context.example/secret", "expected": false}
+{"id": "english-long", "user": "Explain why binary search terminates.", "assistant": "The search interval strictly shrinks on every iteration.", "candidate": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "expected": false}
+{"id": "english-control", "user": "Explain why binary search terminates.", "assistant": "The search interval strictly shrinks on every iteration.", "candidate": "解释\n这部分", "expected": false}
+{"id": "english-filler", "user": "Explain why binary search terminates.", "assistant": "The search interval strictly shrinks on every iteration.", "candidate": "continue", "expected": false}
+{"id": "learning-good", "user": "只解释思路，先不贴代码。", "assistant": "可以维护前缀和来计算区间的值。", "candidate": "为什么前缀和能降低复杂度？", "expected": true}
+{"id": "learning-null", "user": "只解释思路，先不贴代码。", "assistant": "可以维护前缀和来计算区间的值。", "candidate": null, "expected": false}
+{"id": "learning-url", "user": "只解释思路，先不贴代码。", "assistant": "可以维护前缀和来计算区间的值。", "candidate": "打开 https://not-in-context.example/secret", "expected": false}
+{"id": "learning-long", "user": "只解释思路，先不贴代码。", "assistant": "可以维护前缀和来计算区间的值。", "candidate": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "expected": false}
+{"id": "learning-control", "user": "只解释思路，先不贴代码。", "assistant": "可以维护前缀和来计算区间的值。", "candidate": "解释\n这部分", "expected": false}
+{"id": "learning-filler", "user": "只解释思路，先不贴代码。", "assistant": "可以维护前缀和来计算区间的值。", "candidate": "继续", "expected": false}
+{"id": "file-good", "user": "请分析报告，不要更改原文件。", "assistant": "报告包含两种方法的对比结果。", "candidate": "两种方法的主要差异是什么？", "expected": true}
+{"id": "file-null", "user": "请分析报告，不要更改原文件。", "assistant": "报告包含两种方法的对比结果。", "candidate": null, "expected": false}
+{"id": "file-url", "user": "请分析报告，不要更改原文件。", "assistant": "报告包含两种方法的对比结果。", "candidate": "打开 https://not-in-context.example/secret", "expected": false}
+{"id": "file-long", "user": "请分析报告，不要更改原文件。", "assistant": "报告包含两种方法的对比结果。", "candidate": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "expected": false}
+{"id": "file-control", "user": "请分析报告，不要更改原文件。", "assistant": "报告包含两种方法的对比结果。", "candidate": "解释\n这部分", "expected": false}
+{"id": "file-filler", "user": "请分析报告，不要更改原文件。", "assistant": "报告包含两种方法的对比结果。", "candidate": "继续", "expected": false}
+{"id": "planning-good", "user": "帮我把这个功能拆成可实施的任务。", "assistant": "任务已经按依赖顺序列出。", "candidate": "哪个任务应该最先验证？", "expected": true}
+{"id": "planning-null", "user": "帮我把这个功能拆成可实施的任务。", "assistant": "任务已经按依赖顺序列出。", "candidate": null, "expected": false}
+{"id": "planning-url", "user": "帮我把这个功能拆成可实施的任务。", "assistant": "任务已经按依赖顺序列出。", "candidate": "打开 https://not-in-context.example/secret", "expected": false}
+{"id": "planning-long", "user": "帮我把这个功能拆成可实施的任务。", "assistant": "任务已经按依赖顺序列出。", "candidate": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "expected": false}
+{"id": "planning-control", "user": "帮我把这个功能拆成可实施的任务。", "assistant": "任务已经按依赖顺序列出。", "candidate": "解释\n这部分", "expected": false}
+{"id": "planning-filler", "user": "帮我把这个功能拆成可实施的任务。", "assistant": "任务已经按依赖顺序列出。", "candidate": "继续", "expected": false}
+{"id": "constraint-good", "user": "必须保留现有接口，分析这个重构方案。", "assistant": "重构可以保留接口并替换内部实现。", "candidate": "哪些内部模块适合先替换？", "expected": true}
+{"id": "constraint-null", "user": "必须保留现有接口，分析这个重构方案。", "assistant": "重构可以保留接口并替换内部实现。", "candidate": null, "expected": false}
+{"id": "constraint-url", "user": "必须保留现有接口，分析这个重构方案。", "assistant": "重构可以保留接口并替换内部实现。", "candidate": "打开 https://not-in-context.example/secret", "expected": false}
+{"id": "constraint-long", "user": "必须保留现有接口，分析这个重构方案。", "assistant": "重构可以保留接口并替换内部实现。", "candidate": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "expected": false}
+{"id": "constraint-control", "user": "必须保留现有接口，分析这个重构方案。", "assistant": "重构可以保留接口并替换内部实现。", "candidate": "解释\n这部分", "expected": false}
+{"id": "constraint-filler", "user": "必须保留现有接口，分析这个重构方案。", "assistant": "重构可以保留接口并替换内部实现。", "candidate": "继续", "expected": false}
