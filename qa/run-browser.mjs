@@ -1,0 +1,116 @@
+import { spawn } from 'node:child_process';
+import { createRequire } from 'node:module';
+import { writeFileSync, mkdirSync, existsSync, symlinkSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import assert from 'node:assert/strict';
+const root = fileURLToPath(new URL('../', import.meta.url)).replace(/[\\/]$/, '');
+const pluginDir = existsSync(root + '/lib/index.js') ? root : root + '/dsh-next-message';
+mkdirSync(root + '/e2e-home/profiles/web', { recursive: true });
+if (!existsSync(root + '/e2e-home/profiles/web/node_modules')) symlinkSync(root + '/qa-runtime/node_modules', root + '/e2e-home/profiles/web/node_modules', 'junction');
+if (!existsSync(root + '/qa-runtime/node_modules/dsh-next-message')) symlinkSync(pluginDir, root + '/qa-runtime/node_modules/dsh-next-message', 'junction');
+writeFileSync(root + '/qa/test.patch.yml', '- id: agent-default-model\n  config:\n    provider: fixture\n    model: fixture-flash\n- insert:\n    - id: next-message\n      name: dsh-next-message\n    - id: fixture-provider\n      name: ' + JSON.stringify(root + '/qa/mock-provider.mjs') + '\n');
+const req = createRequire(process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES ? process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES + '/package.json' : root + '/qa-runtime/package.json');
+const { chromium } = req('playwright');
+let browser, page;
+writeFileSync(root + '/e2e-home/next-message.json', JSON.stringify({ enabled: true }));
+const server = spawn(process.execPath, [root + '/qa-runtime/node_modules/@deepseek-ai/dsh/lib/bin.js', 'web', '--patch', root + '/qa/test.patch.yml', '--no-open', '--host', '127.0.0.1', '--port', '0'], { cwd: root, env: { ...process.env, DSH_HOME: root + '/e2e-home' }, stdio: ['ignore', 'pipe', 'pipe'] });
+let output = '';
+server.stdout.on('data', d => { output += d; });
+server.stderr.on('data', d => { output += d; });
+try {
+  const started = Date.now();
+  while (!/dsh web: (http:\/\/[^\s]+)/.test(output)) {
+    if (server.exitCode !== null || Date.now() - started > 30000) throw new Error(output.slice(-5000));
+    await new Promise(r => setTimeout(r, 100));
+  }
+  const url = output.match(/dsh web: (http:\/\/[^\s]+)/)[1];
+  browser = await chromium.launch({ headless: true, executablePath: process.env.DSH_TEST_CHROMIUM || (existsSync(root + '/qa/tmp/chromium') ? root + '/qa/tmp/chromium' : undefined), args: ['--no-sandbox', '--disable-dev-shm-usage', '--use-gl=angle', '--use-angle=swiftshader', '--disable-gpu'] });
+  page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
+  const errors = [];
+  page.on('pageerror', e => errors.push(e.message));
+  const failedResources = [];
+  page.on('response', r => { if (r.status() >= 400) failedResources.push({ url: r.url().split('?')[0], status: r.status() }); });
+  await page.goto(url);
+  await page.waitForTimeout(1800);
+  if (await page.getByRole('button', { name: 'Continue', exact: true }).count()) await page.getByRole('button', { name: 'Continue', exact: true }).click();
+  if (await page.getByText('Choose workspace', { exact: true }).count()) {
+    await page.getByText('Choose workspace', { exact: true }).first().click();
+    await page.waitForTimeout(300);
+    await page.getByRole('button', { name: 'Edit path', exact: true }).click();
+    await page.getByRole('textbox', { name: 'Edit path', exact: true }).fill(pluginDir);
+    await page.getByRole('textbox', { name: 'Edit path', exact: true }).press('Enter');
+    await page.waitForTimeout(300);
+    await page.getByRole('button', { name: 'Open', exact: true }).click();
+    await page.waitForTimeout(500);
+  }
+  const passed = [];
+  const editor = page.locator('[data-composer-input]');
+  const ghost = page.locator('[data-composer-ghost="dsh-next-message"]');
+  const host = async action => page.evaluate(async action => {
+    const response = await fetch('api/dsh-next-message', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ type: 'client-request', rpcId: 'inspect', method: 'dsh-next-message', payload: { action } }) });
+    return (await response.json()).result.value;
+  }, action);
+  async function send(text) { await editor.fill(text); await editor.press('Enter'); await ghost.waitFor({ state: 'visible', timeout: 6000 }); }
+  await page.getByText('New Session', { exact: true }).first().click();
+  await page.waitForTimeout(600);
+  console.log('Testing fresh conversation');
+  await send('请实现快速排序并运行边界测试。');
+  assert.equal(await editor.innerText(), ''); passed.push('ghost is display-only, not draft content');
+  assert.match(await ghost.innerText(), /边界测试/); passed.push('generated client loads through native DSH ModuleLoader and paints a suggestion');
+  await editor.click(); await editor.press('Shift+Tab');
+  assert.equal(await editor.innerText(), ''); passed.push('Shift+Tab retains focus navigation');
+  await editor.click();
+  await editor.evaluate(el => el.dispatchEvent(new CompositionEvent('compositionstart', { bubbles: true, data: '中' })));
+  await page.waitForTimeout(50);
+  assert.equal(await ghost.count(), 0);
+  await editor.evaluate(el => el.dispatchEvent(new KeyboardEvent('keydown', { bubbles: true, key: 'Tab', isComposing: true })));
+  assert.doesNotMatch(await editor.innerText(), /边界测试/); passed.push('IME owns its Tab and hides the ghost during composition');
+  await editor.evaluate(el => el.dispatchEvent(new CompositionEvent('compositionend', { bubbles: true, data: '' })));
+  await page.waitForTimeout(100);
+  await send('请验证另一个边界条件并给出测试结果。');
+  const before = await host('status');
+  await editor.press('Tab');
+  assert.match(await editor.innerText(), /运行一下边界测试/);
+  assert.equal(await ghost.count(), 0); passed.push('Tab inserts the complete suggestion via DSH guarded editor API');
+  await page.waitForTimeout(200);
+  const after = await host('status'); assert.equal(after.requests, before.requests); assert.equal(after.accepted, before.accepted + 1);
+  assert.match(await editor.innerText(), /边界测试/); passed.push('acceptance leaves an unsent editable draft');
+  await editor.press('Control+z'); await page.waitForTimeout(100);
+  assert.equal(await editor.innerText(), ''); passed.push('one Undo restores the empty draft');
+  await send('请继续分析第二组边界条件并说明测试。');
+  await editor.press('Escape'); assert.equal(await ghost.count(), 0);
+  await editor.fill('自己的内容'); await editor.fill(''); await page.waitForTimeout(300);
+  assert.equal(await ghost.count(), 0); passed.push('Esc dismisses this turn without recurring suggestions');
+  await send('请检查第三组边界条件并给出测试计划。');
+  await editor.fill('我自己输入的要求'); await page.waitForTimeout(50);
+  assert.equal(await ghost.count(), 0); assert.equal(await editor.innerText(), '我自己输入的要求'); passed.push('user typing immediately withdraws the ghost without replacement');
+  await editor.fill('');
+  await page.getByText('More', { exact: true }).click();
+  await page.getByText('Settings', { exact: true }).last().click();
+  await page.getByText('下一句预测', { exact: true }).first().click();
+  await page.waitForTimeout(250);
+  assert.equal(await page.getByRole('switch').isChecked(), true); passed.push('native Settings section renders stored preferences');
+  await page.getByRole('switch').uncheck();
+  await page.getByRole('button', { name: '保存设置', exact: true }).click();
+  await page.getByText('已保存，立即生效。', { exact: true }).waitFor();
+  assert.equal((await host('config.get')).config.enabled, false); passed.push('settings persist and disabling takes effect immediately');
+  await page.screenshot({ path: root + '/qa/settings.png', fullPage: true });
+  await page.keyboard.press('Escape');
+  const disabledBefore = await host('status');
+  await editor.fill('请解释下一组测试，不修改代码。'); await editor.press('Enter'); await page.waitForTimeout(1500);
+  assert.equal((await host('status')).requests, disabledBefore.requests); assert.equal(await ghost.count(), 0); passed.push('disabled plugin makes no prediction call after another assistant turn');
+  assert.equal(errors.length, 0);
+  const report = { dshVersion: '0.2.1-rc.2', platform: 'Linux / Chromium, native DSH web UI', provider: 'local deterministic fixture (not a real model)', passed, pageErrors: errors, failedResources };
+  writeFileSync(root + '/qa/browser-results.json', JSON.stringify(report, null, 2));
+  console.log(JSON.stringify(report, null, 2));
+  await page.screenshot({ path: root + '/qa/initial.png', fullPage: true });
+  writeFileSync(root + '/qa/host-output.log', output);
+} catch (error) {
+  console.log('FAILED BODY', await page?.locator('body').innerText());
+  await page?.screenshot({ path: root + '/qa/failure.png', fullPage: true });
+  throw error;
+} finally {
+  await browser?.close();
+  server.kill('SIGTERM');
+  setTimeout(() => server.kill('SIGKILL'), 1000).unref();
+}
