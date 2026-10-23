@@ -1,6 +1,6 @@
 # dsh-next-message
 
-![dsh-next-message](docs/assets/hero.svg)
+![DSH Next Message: Your next message. Just press Tab.](docs/assets/hero.en.svg)
 
 A next-message prediction plugin for DeepSeek Harness. When the assistant finishes a turn and your composer is empty, it shows one line of ghost text: its guess at what you'll say next. Press Tab to use it, Esc to ignore it, or just type your own. Nothing is ever sent unless you send it.
 

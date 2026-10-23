@@ -20,7 +20,7 @@
     "NOTICE",
     "docs/VALIDATION.md",
     "README.en.md",
-    "docs/assets/hero.svg"
+    "docs/assets"
   ],
   "engines": {
     "node": "^22.19 || >=24",

@@ -1,6 +1,6 @@
 # dsh-next-message
 
-![dsh-next-message](docs/assets/hero.svg)
+![DSH 下一句预测：下一句，顺手就有。](docs/assets/hero.zh-CN.svg)
 
 DeepSeek Harness 的下一句预测插件。助手回完一轮，如果你的输入框是空的，它会在里面放一行灰字，是它猜你接下来要说的话。想用就按 Tab，不想用就按 Esc，或者直接打你自己的。消息永远由你自己发送。
 
