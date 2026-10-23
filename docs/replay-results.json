@@ -1,0 +1,370 @@
+{
+  "kind": "offline-contract-replay",
+  "cases": 72,
+  "passed": 72,
+  "failed": [],
+  "liveModelCalls": 0,
+  "note": "Measures deterministic context/output behavior only. No claim about live prediction quality or latency.",
+  "results": [
+    {
+      "id": "code_tests-good",
+      "pass": true,
+      "contextChars": 135
+    },
+    {
+      "id": "code_tests-null",
+      "pass": true,
+      "contextChars": 135
+    },
+    {
+      "id": "code_tests-url",
+      "pass": true,
+      "contextChars": 135
+    },
+    {
+      "id": "code_tests-long",
+      "pass": true,
+      "contextChars": 135
+    },
+    {
+      "id": "code_tests-control",
+      "pass": true,
+      "contextChars": 135
+    },
+    {
+      "id": "code_tests-filler",
+      "pass": true,
+      "contextChars": 135
+    },
+    {
+      "id": "code_review-good",
+      "pass": true,
+      "contextChars": 154
+    },
+    {
+      "id": "code_review-null",
+      "pass": true,
+      "contextChars": 154
+    },
+    {
+      "id": "code_review-url",
+      "pass": true,
+      "contextChars": 154
+    },
+    {
+      "id": "code_review-long",
+      "pass": true,
+      "contextChars": 154
+    },
+    {
+      "id": "code_review-control",
+      "pass": true,
+      "contextChars": 154
+    },
+    {
+      "id": "code_review-filler",
+      "pass": true,
+      "contextChars": 154
+    },
+    {
+      "id": "algorithm-good",
+      "pass": true,
+      "contextChars": 145
+    },
+    {
+      "id": "algorithm-null",
+      "pass": true,
+      "contextChars": 145
+    },
+    {
+      "id": "algorithm-url",
+      "pass": true,
+      "contextChars": 145
+    },
+    {
+      "id": "algorithm-long",
+      "pass": true,
+      "contextChars": 145
+    },
+    {
+      "id": "algorithm-control",
+      "pass": true,
+      "contextChars": 145
+    },
+    {
+      "id": "algorithm-filler",
+      "pass": true,
+      "contextChars": 145
+    },
+    {
+      "id": "math-good",
+      "pass": true,
+      "contextChars": 140
+    },
+    {
+      "id": "math-null",
+      "pass": true,
+      "contextChars": 140
+    },
+    {
+      "id": "math-url",
+      "pass": true,
+      "contextChars": 140
+    },
+    {
+      "id": "math-long",
+      "pass": true,
+      "contextChars": 140
+    },
+    {
+      "id": "math-control",
+      "pass": true,
+      "contextChars": 140
+    },
+    {
+      "id": "math-filler",
+      "pass": true,
+      "contextChars": 140
+    },
+    {
+      "id": "comparison-good",
+      "pass": true,
+      "contextChars": 157
+    },
+    {
+      "id": "comparison-null",
+      "pass": true,
+      "contextChars": 157
+    },
+    {
+      "id": "comparison-url",
+      "pass": true,
+      "contextChars": 157
+    },
+    {
+      "id": "comparison-long",
+      "pass": true,
+      "contextChars": 157
+    },
+    {
+      "id": "comparison-control",
+      "pass": true,
+      "contextChars": 157
+    },
+    {
+      "id": "comparison-filler",
+      "pass": true,
+      "contextChars": 157
+    },
+    {
+      "id": "cost-good",
+      "pass": true,
+      "contextChars": 137
+    },
+    {
+      "id": "cost-null",
+      "pass": true,
+      "contextChars": 137
+    },
+    {
+      "id": "cost-url",
+      "pass": true,
+      "contextChars": 137
+    },
+    {
+      "id": "cost-long",
+      "pass": true,
+      "contextChars": 137
+    },
+    {
+      "id": "cost-control",
+      "pass": true,
+      "contextChars": 137
+    },
+    {
+      "id": "cost-filler",
+      "pass": true,
+      "contextChars": 137
+    },
+    {
+      "id": "debug-good",
+      "pass": true,
+      "contextChars": 135
+    },
+    {
+      "id": "debug-null",
+      "pass": true,
+      "contextChars": 135
+    },
+    {
+      "id": "debug-url",
+      "pass": true,
+      "contextChars": 135
+    },
+    {
+      "id": "debug-long",
+      "pass": true,
+      "contextChars": 135
+    },
+    {
+      "id": "debug-control",
+      "pass": true,
+      "contextChars": 135
+    },
+    {
+      "id": "debug-filler",
+      "pass": true,
+      "contextChars": 135
+    },
+    {
+      "id": "english-good",
+      "pass": true,
+      "contextChars": 202
+    },
+    {
+      "id": "english-null",
+      "pass": true,
+      "contextChars": 202
+    },
+    {
+      "id": "english-url",
+      "pass": true,
+      "contextChars": 202
+    },
+    {
+      "id": "english-long",
+      "pass": true,
+      "contextChars": 202
+    },
+    {
+      "id": "english-control",
+      "pass": true,
+      "contextChars": 202
+    },
+    {
+      "id": "english-filler",
+      "pass": true,
+      "contextChars": 202
+    },
+    {
+      "id": "learning-good",
+      "pass": true,
+      "contextChars": 136
+    },
+    {
+      "id": "learning-null",
+      "pass": true,
+      "contextChars": 136
+    },
+    {
+      "id": "learning-url",
+      "pass": true,
+      "contextChars": 136
+    },
+    {
+      "id": "learning-long",
+      "pass": true,
+      "contextChars": 136
+    },
+    {
+      "id": "learning-control",
+      "pass": true,
+      "contextChars": 136
+    },
+    {
+      "id": "learning-filler",
+      "pass": true,
+      "contextChars": 136
+    },
+    {
+      "id": "file-good",
+      "pass": true,
+      "contextChars": 153
+    },
+    {
+      "id": "file-null",
+      "pass": true,
+      "contextChars": 153
+    },
+    {
+      "id": "file-url",
+      "pass": true,
+      "contextChars": 153
+    },
+    {
+      "id": "file-long",
+      "pass": true,
+      "contextChars": 153
+    },
+    {
+      "id": "file-control",
+      "pass": true,
+      "contextChars": 153
+    },
+    {
+      "id": "file-filler",
+      "pass": true,
+      "contextChars": 153
+    },
+    {
+      "id": "planning-good",
+      "pass": true,
+      "contextChars": 137
+    },
+    {
+      "id": "planning-null",
+      "pass": true,
+      "contextChars": 137
+    },
+    {
+      "id": "planning-url",
+      "pass": true,
+      "contextChars": 137
+    },
+    {
+      "id": "planning-long",
+      "pass": true,
+      "contextChars": 137
+    },
+    {
+      "id": "planning-control",
+      "pass": true,
+      "contextChars": 137
+    },
+    {
+      "id": "planning-filler",
+      "pass": true,
+      "contextChars": 137
+    },
+    {
+      "id": "constraint-good",
+      "pass": true,
+      "contextChars": 163
+    },
+    {
+      "id": "constraint-null",
+      "pass": true,
+      "contextChars": 163
+    },
+    {
+      "id": "constraint-url",
+      "pass": true,
+      "contextChars": 163
+    },
+    {
+      "id": "constraint-long",
+      "pass": true,
+      "contextChars": 163
+    },
+    {
+      "id": "constraint-control",
+      "pass": true,
+      "contextChars": 163
+    },
+    {
+      "id": "constraint-filler",
+      "pass": true,
+      "contextChars": 163
+    }
+  ]
+}

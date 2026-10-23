@@ -1,0 +1,26 @@
+{
+  "dshVersion": "0.2.1-rc.2",
+  "platform": "Linux / Chromium, native DSH web UI",
+  "provider": "local deterministic fixture (not a real model)",
+  "passed": [
+    "ghost is display-only, not draft content",
+    "generated client loads through native DSH ModuleLoader and paints a suggestion",
+    "Shift+Tab retains focus navigation",
+    "IME owns its Tab and hides the ghost during composition",
+    "Tab inserts the complete suggestion via DSH guarded editor API",
+    "acceptance leaves an unsent editable draft",
+    "one Undo restores the empty draft",
+    "Esc dismisses this turn without recurring suggestions",
+    "user typing immediately withdraws the ghost without replacement",
+    "native Settings section renders stored preferences",
+    "settings persist and disabling takes effect immediately",
+    "disabled plugin makes no prediction call after another assistant turn"
+  ],
+  "pageErrors": [],
+  "failedResources": [
+    {
+      "url": "http://127.0.0.1:34001/open-in-app/icon/vscode",
+      "status": 404
+    }
+  ]
+}
