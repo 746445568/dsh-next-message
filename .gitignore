@@ -1,0 +1,11 @@
+node_modules/
+qa-runtime/
+e2e-home/
+qa/tmp/
+qa/*.png
+qa/*.log
+qa/browser-results.json
+qa/browser-state.json
+qa/test.patch.yml
+*.tgz
+dist/

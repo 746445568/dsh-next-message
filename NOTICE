@@ -1,0 +1,16 @@
+This project is an independent community plugin for DeepSeek Harness.
+It is not affiliated with DeepSeek or OpenAI.
+
+Host transport, completed-turn single-flight, and client lifetime design are
+derived from Tieboyh/dsh-next-step (MIT), commit
+4bbdcef6332cdf685cc0decd4ea29177b40348fb (version 0.5.2):
+https://github.com/Tieboyh/dsh-next-step
+Copyright (c) 2026 Tieboyh. Original MIT terms are retained in LICENSE.
+
+Context selection, prediction prompt and output guards, settings, client state
+controller, and revision-guarded editor integration were rewritten for this fork.
+The prompt optimizer from the upstream project is not included.
+
+Other repositories were inspected for comparison; no code from those projects
+is included. Host communication and editor contracts follow the published
+DeepSeek Harness 0.2.1-rc.2 package interfaces.

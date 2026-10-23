@@ -1,0 +1,3 @@
+- insert:
+    - id: next-message
+      name: dsh-next-message
